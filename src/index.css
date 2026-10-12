@@ -1,0 +1,126 @@
+@import "tailwindcss";
+ html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #070B17;
+  overflow-x: hidden;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 8s linear infinite;
+}
+
+@keyframes spinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-reverse {
+  animation: spinReverse 6s linear infinite;
+}
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-orbit {
+  animation: orbit 20s linear infinite;
+}
+@keyframes counter {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.animate-counter {
+  animation: counter 20s linear infinite;
+}
+.network-line{
+    stroke-dasharray:8 8;
+    animation:flow 4s linear infinite;
+}
+
+@keyframes flow{
+    from{
+        stroke-dashoffset:80;
+    }
+    to{
+        stroke-dashoffset:0;
+    }
+}
+@keyframes neonGlow {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 6px currentColor);
+  }
+
+  25% {
+    transform: scale(1.08);
+    filter:
+      drop-shadow(0 0 10px currentColor)
+      drop-shadow(0 0 20px currentColor);
+  }
+
+  50% {
+    transform: scale(1.18);
+    filter:
+      drop-shadow(0 0 20px currentColor)
+      drop-shadow(0 0 35px currentColor)
+      drop-shadow(0 0 55px currentColor);
+  }
+
+  75% {
+    transform: scale(1.08);
+    filter:
+      drop-shadow(0 0 10px currentColor)
+      drop-shadow(0 0 20px currentColor);
+  }
+}
+
+.icon-glow {
+  animation: neonGlow 5s ease-in-out infinite;
+  transition: all .4s ease;
+}
+
+.icon-glow:hover {
+  transform: scale(1.25);
+  filter:
+    drop-shadow(0 0 20px currentColor)
+    drop-shadow(0 0 40px currentColor)
+    drop-shadow(0 0 70px currentColor);
+}
+ 
+
+ 
